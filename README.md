@@ -47,3 +47,7 @@ Together, we can work towards making this project a valuable tool for researcher
 
 If you're interested in contributing or collaborating on The Discord Invite Project, feel free to reach out and get involved! 
 Let's work together to turn this concept into a valuable resource for the research community.
+
+## License
+
+This project is open-source and available under the GLWTS Public License. See the LICENSE file for more details.
