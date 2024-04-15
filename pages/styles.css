@@ -8,7 +8,6 @@ body {
     background-position: center;
     background-attachment: fixed; /* Keep the background fixed within the viewport */
     color: #fff;
-    overflow: hidden; /* Prevent scrolling */
 }
 
 body::before {
@@ -66,6 +65,23 @@ main {
     text-align: center;
 }
 
+div.text-container {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Add padding to the container */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+div.text-container p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+div.text-container h3 {
+    margin-bottom: 5px;
+    margin-top: 25px;
+}
+
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
@@ -77,6 +93,7 @@ main {
 }
 
 .btn {
+    margin-top: 15px;
     display: inline-block;
     background-color: #fff;
     color: #000;
@@ -84,6 +101,7 @@ main {
     padding: 12px 24px;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    margin-bottom: 75px;
 }
 
 .btn:hover {
@@ -95,12 +113,10 @@ footer {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
     position: sticky;
-    bottom: 0; /* Stick the footer to the bottom */
-    z-index: 1000; /* Ensure the footer stays on top of other content */
     background-size: 100% auto; /* Ensure the footer background covers the whole window */
 }
 
 footer p {
     margin-top: 10px;
-    margin-bottom: 10px; /* Corrected typo in your CSS */
+    margin-bottom: 10px;
 }
