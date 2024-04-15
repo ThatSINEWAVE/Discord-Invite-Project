@@ -16,7 +16,7 @@ By checking the Discord API, this database could potentially reveal valuable inf
 
 As of now, The Discord Invite Project is in a conceptual phase. 
 The primary challenge lies in the immense scale of data that would need to be stored and processed. 
-The database's size is estimated to be almost 4 TERABYTES with exactly 208,827,064,576 rows of data, requiring substantial processing power to effectively manage and analyze.
+The database's size is estimated to be almost 7 TERABYTES with exactly 208,827,064,576 rows of data, requiring substantial processing power to effectively manage and analyze.
 
 <div align="center">
 
