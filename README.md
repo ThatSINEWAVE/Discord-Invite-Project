@@ -47,11 +47,3 @@ Together, we can work towards making this project a valuable tool for researcher
 
 If you're interested in contributing or collaborating on The Discord Invite Project, feel free to reach out and get involved! 
 Let's work together to turn this concept into a valuable resource for the research community.
-
-<div align="center">
-
-## Disclaimer 
-
-This repository is not affiliated with Discord Inc. and is solely for educational and research purposes.*
-
-</div>
