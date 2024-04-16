@@ -40,6 +40,8 @@ The plan is to turn this tool into a powerful search engine dedicated to researc
 
 ## Repository Contents
 
+- `data/active_invites.json`: Example file containing active generated invite links.
+- `data/inactive_invites.json`: Example file containing inactive generated invite links.
 - `data/discord_invites_1.json`: Example file containing a list of 10 Discord invite links.
 - `data/discord_server_details.json`: Example file of a successful API query.
 - `tools/individual_checker.py`: Script to check the validity and activity status of individual Discord invite links.
