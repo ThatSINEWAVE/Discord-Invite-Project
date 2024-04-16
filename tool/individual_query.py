@@ -45,6 +45,13 @@ def construct_icon_url(guild_id, icon_hash):
         return "None"
 
 
+def construct_splash_url(guild_id, splash_hash):
+    if guild_id and splash_hash:
+        return f"https://cdn.discordapp.com/splashes/{guild_id}/{splash_hash}?size=1024"
+    else:
+        return "None"
+
+
 def main():
     invite_code = input("Enter Discord invite code: ")
     invite_details = fetch_invite(invite_code)
@@ -57,9 +64,10 @@ def main():
         invite_details["inviter"]["avatar"] = construct_avatar_url(inviter_id, invite_details["inviter"].get("avatar"))
         invite_details["inviter"]["banner"] = construct_banner_url(inviter_id, invite_details["inviter"].get("banner"))
 
-        guild_id = invite_details["guild"]["id"]
+        guild_id = invite_details["guild"]["id"]  # Move this line up
         invite_details["guild"]["icon"] = construct_icon_url(guild_id, invite_details["guild"].get("icon"))
         invite_details["guild"]["banner"] = construct_banner_url(guild_id, invite_details["guild"].get("banner"))
+        invite_details["guild"]["splash"] = construct_splash_url(guild_id, invite_details["guild"].get("splash"))  # Now it's safe to use guild_id
 
         with open("../data/discord_server_details.json", "w") as json_file:
             json.dump(invite_details, json_file, indent=4)
