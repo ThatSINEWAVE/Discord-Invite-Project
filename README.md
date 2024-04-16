@@ -41,10 +41,12 @@ The plan is to turn this tool into a powerful search engine dedicated to researc
 ## Repository Contents
 
 - `data/discord_invites_1.json`: Example file containing a list of 10 Discord invite links.
+- `data/discord_server_details.json`: Example file of a successful API query.
 - `tools/individual_checker.py`: Script to check the validity and activity status of individual Discord invite links.
 - `tools/individual_generator.py`: Script to generate Discord invite links and save them to JSON files.
 - `tools/individual_query.py`; Script to query the API for full details about a specific invite link and save it to a JSON file.
-- `tools/generator_and_checker.py`: Script combining generation and checking functionalities for Discord invite links.
+- `tools/generator_checker.py`: Script combining generation and checking functionalities for Discord invite links.
+- `tools/generator_checker_query.py`: Script combining all individual scripts into one powerful invite link generator, checker and API query tool.
 - `images/`: GitHub Pages. (Please ignore)
 - `index.html`: GitHub Pages. (Please ignore)
 - `about.html`: GitHub Pages. (Please ignore)
