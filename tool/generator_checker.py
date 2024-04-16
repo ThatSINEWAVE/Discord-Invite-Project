@@ -1,7 +1,8 @@
 import requests
 import re
 import json
-
+import string
+import random
 
 def extract_invite_code(link):
     # Extract the invite code from the link using regex
@@ -31,20 +32,40 @@ def is_invite_active(invite):
         return False  # Error parsing JSON
 
 
-def generate_and_check_invites():
-    with open("generated_invites.json", "r") as f:
-        generated_invites = json.load(f)
+def generate_random_invite():
+    characters = string.ascii_letters + string.digits
+    invite_code = ''.join(random.choice(characters) for _ in range(7))
+    return f"https://discord.gg/{invite_code}"
+
+
+def main():
+    target_active_invites = int(input("Enter the number of active invites you want to find: "))
+    print(f"Searching for {target_active_invites} active Discord invites...")
 
     active_invites = []
+    inactive_invites = []
 
-    for invite in generated_invites:
-        if is_invite_active(invite):
-            active_invites.append(invite)
+    while len(active_invites) < target_active_invites:
+        invite_link = generate_random_invite()
+        print(f"Checking invite: {invite_link}")
 
-    with open("active_invites.json", "w") as f:
+        if is_invite_active(invite_link):
+            active_invites.append(invite_link)
+            print(f"Found an active invite: {invite_link}")
+        else:
+            inactive_invites.append(invite_link)
+            print(f"Invite is inactive: {invite_link}")
+
+    with open("../data/active_invites.json", "w") as f:
         json.dump(active_invites, f, indent=4)
 
+    with open("../data/inactive_invites.json", "w") as f:
+        json.dump(inactive_invites, f, indent=4)
+
+    print(f"Found {len(active_invites)} active invites.")
     print("Active invites have been saved to active_invites.json.")
+    print("Inactive invites have been saved to inactive_invites.json.")
 
 
-generate_and_check_invites()
+if __name__ == "__main__":
+    main()

@@ -83,14 +83,17 @@ def generate_invite_link():
 
 def main():
     num_invites = int(input("Enter the number of invite links to generate, check, and query: "))
+    print(f"Generating and checking {num_invites} invite links...")
 
     invite_details = []
 
-    for _ in range(num_invites):
+    for i in range(num_invites):
         invite_link = generate_invite_link()
         invite_code = extract_invite_code(invite_link)
+        print(f"Checking invite link {i+1}/{num_invites}: {invite_link}")
 
         if is_invite_active(invite_link):
+            print(f"Invite link {i+1}/{num_invites} is active, fetching details...")
             invite_data = fetch_invite(invite_code)
 
             if invite_data:
@@ -106,6 +109,7 @@ def main():
                 invite_data["guild"]["banner"] = construct_banner_url(guild_id, invite_data["guild"].get("banner"))
 
                 invite_details.append(invite_data)
+                print(f"Invite details for link {i+1}/{num_invites} fetched and appended.")
         else:
             expired_invite_details = {
                 "type": "expired",
@@ -120,6 +124,7 @@ def main():
                 "approximate_presence_count": "expired"
             }
             invite_details.append(expired_invite_details)
+            print(f"Invite link {i+1}/{num_invites} is expired or invalid, details skipped.")
 
     with open("../data/discord_server_details.json", "w") as json_file:
         json.dump(invite_details, json_file, indent=4)
