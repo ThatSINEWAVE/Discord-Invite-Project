@@ -1,6 +1,6 @@
 <div align="center">
 
-# The Discord Invite Project
+# [The Discord Invite Project](https://thatsinewave.github.io/Discord-Invite-Project)
 
 Welcome to The Discord Invite Project! This repository serves as an educational and research platform exploring the concept of creating a database to track and analyze Discord invite links. 
 The project aims to assist in Open Source Intelligence (OSINT) investigations by providing tools to identify and study Discord servers, including potentially malicious ones.
