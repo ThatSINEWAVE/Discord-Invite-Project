@@ -12,6 +12,12 @@ The project aims to assist in Open Source Intelligence (OSINT) investigations by
 The Discord Invite Project revolves around the idea of building a comprehensive database of Discord invite links for research purposes. 
 By checking the Discord API, this database could potentially reveal valuable information about the creators of invites, server creators, and other metadata associated with Discord servers.
 
+<div align="center">
+
+# [Join my discord server](https://discord.gg/2nHHHBWNDw)
+
+</div>
+
 ### Concept Status
 
 As of now, The Discord Invite Project is in a conceptual phase. 
