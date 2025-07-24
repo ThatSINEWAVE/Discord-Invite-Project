@@ -14,7 +14,7 @@ By checking the Discord API, this database could potentially reveal valuable inf
 
 <div align="center">
 
-# [Join my discord server](https://discord.gg/2nHHHBWNDw)
+# [Join my discord server](https://thatsinewave.github.io/Discord-Redirect/)
 
 </div>
 
